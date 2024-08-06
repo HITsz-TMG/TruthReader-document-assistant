@@ -316,19 +316,12 @@ def dochelper_chat_fn(
     for h_pair in history:
         h_pair[1] = restore_bracket_references(restore_progress(h_pair[1].split("""<small id="Reference"><font color=gray>""")[0]))
 
-    print("#"*100)
-    print(history)
-    print("#"*100)
-
-
     # Step2: retrieve documents
     retrieval_instruction = genereate_retrieval_prompt(question, history, embedding_tokenizer, history_max_len=500)
     
     retrieved_documents_with_score = faiss_db.similarity_search_with_score(retrieval_instruction, k=200)[:retrieved_doc_num]
     retrieved_documents = [item[0] for item in retrieved_documents_with_score]
     retrieved_documents = sort_documents_by_doc_page(retrieved_documents)
-
-    print(retrieved_documents)
 
     # Step3: genereate response
     qa_instruction = generate_qa_prompt(question, retrieved_documents, chat_tokenizer, max_context_len=max_context_len)
@@ -412,8 +405,8 @@ def dochelper_chat_fn(
     generated_text = replace_bracket_references(wrap_answer_with_factual_score(generated_text, chat_tokenizer, retrieved_documents), num_reference=len(retrieved_documents)) + citation_suffix
     # generated_text = replace_bracket_references(generated_text, num_reference=len(retrieved_documents)) + citation_suffix
 
-    logging.info("Response:\n{}".format(generated_text))
-    logging.info("-"*100)
+    logging.debug("Response:\n{}".format(generated_text))
+    logging.debug("-"*100)
     yield generated_text
 
     if torch.cuda.is_available():
