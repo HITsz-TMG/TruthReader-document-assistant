@@ -1,0 +1,36 @@
+<style>
+:root {
+--highlight-background-color-light: #F1EAFF;
+--highlight-background-color-dark: #3E00FF;
+}
+
+body {
+--highlight-background-color: var(--highlight-background-color-light);
+}
+
+@media (prefers-color-scheme: dark) {
+body {
+  --highlight-background-color: var(--highlight-background-color-dark);
+}
+}
+</style>
+
+<script>
+document.addEventListener('click', function(event) {
+  if (event.target.tagName.toLowerCase() === 'a') {
+  var href = event.target.getAttribute('href');
+
+  if (href && href.startsWith('#')) {
+      var targetId = href.substring(1);
+      var targetArticle = document.getElementById(targetId);
+      var articles = document.getElementsByTagName('article');
+      
+      for (var i = 0; i < articles.length; i++) {
+          articles[i].style.backgroundColor = '';
+      }
+      
+      targetArticle.style.backgroundColor = 'var(--highlight-background-color)';
+  }
+}
+});
+</script>
