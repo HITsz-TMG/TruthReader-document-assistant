@@ -4,8 +4,8 @@
 
 <div align="center">
 
- [System Architecture](https://github.com/YanshekWoo/TruthReader-document-assistant?tab=readme-ov-file#blue_book-system-architecture) | [Getting Started
-](https://github.com/YanshekWoo/TruthReader-document-assistant?tab=readme-ov-file#rocket-getting-started) | [Environments](https://github.com/YanshekWoo/TruthReader-document-assistant?tab=readme-ov-file#zap-environments) | [Model and Data](https://github.com/YanshekWoo/TruthReader-document-assistant?tab=readme-ov-file#card_index_dividers-model-and-data) | [Optimization Progress](https://github.com/YanshekWoo/TruthReader-document-assistant?tab=readme-ov-file#thought_balloon-optimization-progress) | [Citation](https://github.com/YanshekWoo/TruthReader-document-assistant?tab=readme-ov-file#link-citation)
+ [System Architecture](https://github.com/HITsz-TMG/TruthReader-document-assistant?tab=readme-ov-file#blue_book-system-architecture) | [Getting Started
+](https://github.com/HITsz-TMG/TruthReader-document-assistant?tab=readme-ov-file#rocket-getting-started) | [Environments](https://github.com/HITsz-TMG/TruthReader-document-assistant?tab=readme-ov-file#zap-environments) | [Model and Data](https://github.com/HITsz-TMG/TruthReader-document-assistant?tab=readme-ov-file#card_index_dividers-model-and-data) | [Optimization Progress](https://github.com/HITsz-TMG/TruthReader-document-assistant?tab=readme-ov-file#thought_balloon-optimization-progress) | [Citation](https://github.com/HITsz-TMG/TruthReader-document-assistant?tab=readme-ov-file#link-citation)
 
 </div>
 
@@ -59,7 +59,7 @@ Please cite the repo if you use the model or code in this repo.
   year = {2024},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/YanshekWoo/TruthReader-document-assistant}},
+  howpublished = {\url{https://github.com/HITsz-TMG/TruthReader-document-assistant}},
 }
 ```
 
