@@ -54,7 +54,7 @@ Please cite the repo if you use the model or code in this repo.
 
 ```
 @misc{truthreader,
-  author = {Xinshuo Hu and Zetian Sun and Dongfang Li and Shaolin Ye and Zifei Shan and Qian Chen and Baotian Hu and Min Zhang},
+  author = {Dongfang Li and Xinshuo Hu and Zetian Sun and Baotian Hu and Shaolin Ye and Zifei Shan and Qian Chen and Min Zhang},
   title = {TruthReader: Towards Trustworthy Document Assistant Chatbot with Reliable Attribution},
   year = {2024},
   publisher = {GitHub},
