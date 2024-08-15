@@ -25,6 +25,8 @@ The architecture and workflow of our document assistant chatbot TruthReader. It 
 
 ## :rocket: Getting Started
 
+### Deploy model with vllm
+
 
 
 ## :rainbow: Environments
