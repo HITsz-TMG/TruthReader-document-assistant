@@ -25,7 +25,27 @@ The architecture and workflow of our document assistant chatbot TruthReader. It 
 
 ## :rocket: Getting Started
 
-### Deploy model with vllm
+### Step 1: Deploy the generators with vllm
+
+Prepare vllm docker on your LLM server. We refer to the official document [Deploying with Docker](https://docs.vllm.ai/en/latest/serving/deploying_with_docker.html).
+
+Dowload the adapted models below and change the parameter `base_model` of `DocHelper/scripts/vllm/run_vllm_Mixtral.sh` with your local path. The you can directly run this script to deploy the model:
+
+```shell
+bash DocHelper/scripts/vllm/run_vllm_Mixtral.sh
+bash DocHelper/scripts/vllm/run_vllm_Qwen.sh
+```
+
+
+### Step 2: Run the backend of this framework
+
+Run the script to deploy the framework:
+
+```shell
+bash DocHelper/scripts/run.sh
+```
+
+You should also replace the parameter with your local path. Note that the `chat_model_path` might include both Qwen and Mixtral tokenizer path (no model parameters needed), and please split different path with ";".
 
 
 

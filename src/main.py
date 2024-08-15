@@ -418,7 +418,7 @@ def init(
         embed_model_path: str = None,
         chat_model_path: str = None,
         chat_model_server_address: str = None,
-        orc_model_path: str = None,
+        ocr_model_path: str = None,
         log_dir: str = None,
         tmp_folder: str = None,
     ):
@@ -455,7 +455,7 @@ def init(
     )
     embedding_tokenizer = embedding_model.client.tokenizer
 
-    pdf_processer = PDFProcesser(orc_model_path)
+    pdf_processer = PDFProcesser(ocr_model_path)
 
     chat_tokenizer_dict = {}
     chat_model_dict = {}
@@ -483,12 +483,12 @@ def main(
         embed_model_path: str = None,
         chat_model_path: str = None,
         chat_model_server: str = None,
-        orc_model_path: str = None,
+        ocr_model_path: str = None,
         log_dir: str = None,
         tmp_folder: str = None,
         port: int = 8080,
     ):
-    init(embed_model_path, chat_model_path, chat_model_server, orc_model_path, log_dir, tmp_folder)
+    init(embed_model_path, chat_model_path, chat_model_server, ocr_model_path, log_dir, tmp_folder)
 
     with open(Path(__file__).parent / "resources/head.html") as html_file:
         head = html_file.read().strip()
@@ -630,7 +630,7 @@ def main(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--embed_model_path", type=str, default=None)
-    parser.add_argument("--orc_model_path", type=str, default=None)
+    parser.add_argument("--ocr_model_path", type=str, default=None)
     parser.add_argument("--chat_model_path", type=str, default=None)
     parser.add_argument("--chat_model_server", type=str, default=None)
     parser.add_argument("--log_dir", type=str, default=None)
