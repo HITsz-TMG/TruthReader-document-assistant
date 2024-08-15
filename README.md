@@ -41,6 +41,7 @@ conda env create -f environment.yaml
 | [HIT-TMG/bge-m3_RAG-conversational-IR](https://huggingface.co/HIT-TMG/bge-m3_RAG-conversational-IR)   | [BAAI/bge-m3](https://huggingface.co/BAAI/bge-m3)   | retriever                |
 | [HIT-TMG/Mixtral_13B_Chat_RAG-Reader](https://huggingface.co/HIT-TMG/Mixtral_13B_Chat_RAG-Reader)               | [cloudyu/Mixtral_13B_Chat](https://huggingface.co/cloudyu/Mixtral_13B_Chat) | generator               |
 | [HIT-TMG/Qwen1.5-14B-Chat_RAG-Reader](https://huggingface.co/HIT-TMG/Qwen1.5-14B-Chat_RAG-Reader) | [Qwen/Qwen1.5-14B-Chat](https://huggingface.co/Qwen/Qwen1.5-14B-Chat)  | generator              |
+| [pszemraj/nougat-small-onnx](https://huggingface.co/pszemraj/nougat-small-onnx) | [facebook/nougat-small](https://huggingface.co/facebook/nougat-small)  | OCR model      
 
 We also release our training dataset on the huggingface hub: [HIT-TMG/TruthReader_RAG_train](https://huggingface.co/datasets/HIT-TMG/TruthReader_RAG_train)
 
