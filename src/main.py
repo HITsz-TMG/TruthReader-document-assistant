@@ -356,7 +356,7 @@ def dochelper_chat_fn(
                 yield replace_bracket_references(generated_text, num_reference=len(retrieved_documents))
         
     else:
-        port_dict = {"Baichuan-13B": 8000, "Qwen-14B": 8001, "Mixtral-7B*2 (en pref)": 8002,}
+        port_dict = {"Baichuan-13B": 8000, "Qwen-14B": 8001, "Mixtral-7B*2": 8002,}
         port = port_dict.get(model_selection, 8001)
 
         client = OpenAI(
@@ -460,7 +460,7 @@ def init(
     chat_tokenizer_dict = {}
     chat_model_dict = {}
     for model_path in chat_model_path.split(";"):
-        if "LyChee" in model_path.lower():
+        if "lychee" in model_path.lower():
             model_name = "LyChee-6B"
             chat_model_dict[model_name] = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto", torch_dtype=torch.float16, trust_remote_code=True, max_memory={0: "28GB",})
         elif "baichuan" in model_path.lower():
@@ -470,7 +470,7 @@ def init(
             model_name = "Qwen-14B"
             chat_model_dict[model_name] = None
         elif "mixtral" in model_path.lower():
-            model_name = "Mixtral-7B*2 (en pref)"
+            model_name = "Mixtral-7B*2"
             chat_model_dict[model_name] = None
         else:
             raise NotImplementedError("Could not parser the model type from {}.".format(model_path))
@@ -552,7 +552,7 @@ def main(
                     clear_btn=gr.Button("🗑️  Clear", variant="secondary", interactive=False, render=False, scale=1,  size="sm"),
 
                     additional_inputs=[
-                        gr.Radio(["Mixtral-7B*2 (en pref)", "LyChee-6B", "Baichuan-13B", "Qwen-14B"], value="Qwen-14B", label="Model Selection", render=True),
+                        gr.Radio(["LyChee-6B", "Mixtral-7B*2", "Qwen-14B"], value="Qwen-14B", label="Model Selection", render=True),
                         gr.components.Slider(
                             minimum=0.01, maximum=1.20, step=0.01, value=0.8, label="Temperature", render=False,
                         ),
