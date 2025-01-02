@@ -622,8 +622,7 @@ def main(
     demo.queue(api_open=False).launch(
         server_name=get_local_ip(), server_port=port, 
         share=False, show_api=False, 
-        favicon_path=Path(__file__).parent / "fig/favicon.png", 
-        auth=[("xinshuohu", "emnlp2024@demo"), ("emnlp2024@demo", "emnlp2024@demo")], auth_message="""The <b><i>username</i></b> and <b><i>password</i></b> can be found in the footnote of our underview paper."""
+        favicon_path=Path(__file__).parent / "fig/favicon.png",
         )
 
 
